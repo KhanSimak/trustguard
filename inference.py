@@ -55,4 +55,3 @@ def verify_response(query: str, context: str, response: str):
         "hallucination_probability": hallucination_probability,
         "threshold": THRESHOLD,
     }
-"""wwe"""

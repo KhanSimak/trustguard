@@ -3,9 +3,24 @@ from fastapi import FastAPI
 from inference import verify_response
 from schemas import VerifyRequest, VerifyResponse
 from fastapi import HTTPException
+from fastapi.middleware.cors import CORSMiddleware
+
 app = FastAPI(
     title="TrustGuard API",
     version="1.0.0",
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://127.0.0.1:5500",
+        "http://localhost:5500",
+        "http://127.0.0.1:8000",
+        "http://localhost:8000"
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 

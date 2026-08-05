@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrustGuard AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <h1>TrustGuard AI</h1>
+
+        <p class="subtitle">
+            Hallucination Detection Engine for Large Language Models
+        </p>
+
+        <p class="description">
+            Verify whether an AI-generated response is supported by the supplied context.
+        </p>
+
+    </header>
+
+    <!-- ================= SAMPLE BUTTONS ================= -->
+
+    <section class="samples">
+
+        <button id="groundedBtn">
+            Load Grounded Example
+        </button>
+
+        <button id="hallucinatedBtn">
+            Load Hallucinated Example
+        </button>
+
+    </section>
+
+    <!-- ================= FORM ================= -->
+
+    <section class="card">
+
+        <label for="query">
+            Question
+        </label>
+
+        <textarea
+            id="query"
+            rows="3"
+            placeholder="Enter the user's question..."
+        ></textarea>
+
+
+        <label for="context">
+            Context
+        </label>
+
+        <textarea
+            id="context"
+            rows="7"
+            placeholder="Paste retrieved context..."
+        ></textarea>
+
+
+        <label for="response">
+            LLM Response
+        </label>
+
+        <textarea
+            id="response"
+            rows="5"
+            placeholder="Paste the model response..."
+        ></textarea>
+
+
+        <button id="verifyBtn">
+            Verify Response
+        </button>
+
+    </section>
+
+    <!-- ================= LOADING ================= -->
+
+    <section id="loader" class="hidden">
+
+        <div class="spinner"></div>
+
+        <p>Verifying response...</p>
+
+    </section>
+
+
+    <!-- ================= RESULT ================= -->
+
+    <section id="resultCard" class="card hidden">
+
+        <h2>Verification Result</h2>
+
+        <div id="statusBadge">
+
+            Grounded
+
+        </div>
+
+        <div class="metric">
+
+            <span>Confidence</span>
+
+            <strong id="confidence">
+                --
+            </strong>
+
+        </div>
+
+        <div class="metric">
+
+            <span>Hallucination Probability</span>
+
+            <strong id="probability">
+                --
+            </strong>
+
+        </div>
+
+        <div class="progress">
+
+            <div id="progressBar"></div>
+
+        </div>
+
+        <div class="metric">
+
+            <span>Threshold</span>
+
+            <strong id="threshold">
+                0.35
+            </strong>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+
+            Powered by FastAPI • ONNX Runtime • DistilBERT
+
+        </p>
+
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
