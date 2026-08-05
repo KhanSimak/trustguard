@@ -11,7 +11,6 @@ COPY config.py .
 COPY inference.py .
 COPY schemas.py .
 
-COPY trustguard_onnx ./trustguard_onnx
 
 EXPOSE 8000
 
