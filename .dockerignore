@@ -1,0 +1,9 @@
+.venv
+**pycache**/
+*.pyc
+.ipynb_checkpoints/
+results/
+best_model/
+.git/
+.gitignore
+README.md

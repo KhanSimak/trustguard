@@ -1,0 +1,33 @@
+[33mdec5e6a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m Remove ONNX model from repository
+ .gitignore                              |     3 [32m+[m[31m-[m
+ trustguard_onnx/config.json             |    25 [31m-[m
+ trustguard_onnx/model.onnx              |   Bin [31m267958137[m -> [32m0[m bytes
+ trustguard_onnx/special_tokens_map.json |    37 [31m-[m
+ trustguard_onnx/tokenizer.json          | 30686 [31m------------------------------[m
+ trustguard_onnx/tokenizer_config.json   |    63 [31m-[m
+ trustguard_onnx/vocab.txt               | 30522 [31m-----------------------------[m
+ 7 files changed, 2 insertions(+), 61334 deletions(-)
+[33mf60fb97[m Initial TrustGuard deployment
+ .dockerignore                           |     9 [32m+[m
+ .gitignore                              |     4 [32m+[m
+ app.py                                  |    63 [32m+[m
+ best_model/config.json                  |    24 [32m+[m
+ best_model/model.safetensors            |   Bin [31m0[m -> [32m267832560[m bytes
+ best_model/special_tokens_map.json      |     7 [32m+[m
+ best_model/tokenizer.json               | 30686 [32m++++++++++++++++++++++++++++++[m
+ best_model/tokenizer_config.json        |    56 [32m+[m
+ best_model/training_args.bin            |   Bin [31m0[m -> [32m5304[m bytes
+ best_model/vocab.txt                    | 30522 [32m+++++++++++++++++++++++++++++[m
+ config.py                               |     5 [32m+[m
+ dockerfile                              |    18 [32m+[m
+ export_onxx.py                          |    18 [32m+[m
+ inference.py                            |    57 [32m+[m
+ requirements.txt                        |     7 [32m+[m
+ schemas.py                              |    14 [32m+[m
+ trustguard_onnx/config.json             |    25 [32m+[m
+ trustguard_onnx/model.onnx              |   Bin [31m0[m -> [32m267958137[m bytes
+ trustguard_onnx/special_tokens_map.json |    37 [32m+[m
+ trustguard_onnx/tokenizer.json          | 30686 [32m++++++++++++++++++++++++++++++[m
+ trustguard_onnx/tokenizer_config.json   |    63 [32m+[m
+ trustguard_onnx/vocab.txt               | 30522 [32m+++++++++++++++++++++++++++++[m
+ 22 files changed, 122823 insertions(+)
