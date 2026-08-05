@@ -62,27 +62,19 @@ resultCard.classList.add("hidden");
 
 try{
 
-const res = await fetch(
-"https://trustguard-cl8r.onrender.com/verify",
-{
-method:"POST",
+const API_URL = "https://trustguard-cl8r.onrender.com";
 
-headers:{
-"Content-Type":"application/json"
-},
-
-body:JSON.stringify({
-
-query:query.value,
-
-context:context.value,
-
-response:responseBox.value
-
-})
-
-}
-);
+const res = await fetch(`${API_URL}/verify`, {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        query: query.value,
+        context: context.value,
+        response: responseBox.value
+    })
+});
 
 const data = await res.json();
 
