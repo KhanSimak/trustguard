@@ -3,5 +3,6 @@ __pycache__/
 *.pyc
 .ipynb_checkpoints/
 
-trustguard_onnx/
 best_model/
+trustguard_onnx/
+trustguard-onxx/
