@@ -1,421 +1,388 @@
-/* ==========================
-   RESET
-========================== */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
+body{
 
-    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-family:Inter,"Segoe UI",Arial,sans-serif;
 
-    background: #f5f7fb;
+    background:#f8fafc;
 
-    color: #1f2937;
+    color:#0f172a;
 
-    line-height: 1.6;
-
+    line-height:1.5;
 }
 
+.container{
 
-/* ==========================
-   CONTAINER
-========================== */
+    width:min(1100px,92%);
 
-.container {
-
-    max-width: 900px;
-
-    margin: auto;
-
-    padding: 40px 20px;
+    margin:50px auto;
 
 }
 
+header{
 
-/* ==========================
-   HEADER
-========================== */
+    display:flex;
 
-header {
+    justify-content:space-between;
 
-    text-align: center;
+    align-items:center;
 
-    margin-bottom: 40px;
-
-}
-
-header h1 {
-
-    font-size: 42px;
-
-    font-weight: 700;
-
-    margin-bottom: 12px;
+    margin-bottom:40px;
 
 }
-
-.subtitle {
-
-    color: #2563eb;
-
-    font-size: 18px;
-
-    font-weight: 600;
-
-    margin-bottom: 10px;
-
-}
-
-.description {
-
-    color: #6b7280;
-
-    max-width: 650px;
-
-    margin: auto;
-
-}
-
-
-/* ==========================
-   SAMPLE BUTTONS
-========================== */
-
-.samples {
-
-    display: flex;
-
-    gap: 15px;
-
-    justify-content: center;
-
-    margin-bottom: 30px;
-
-    flex-wrap: wrap;
-
-}
-
-.samples button {
-
-    padding: 12px 18px;
-
-    border-radius: 10px;
-
-    border: none;
-
-    cursor: pointer;
-
-    background: white;
-
-    box-shadow: 0 2px 8px rgba(0,0,0,.08);
-
-    transition: .25s;
-
-    font-size: 15px;
-
-}
-
-.samples button:hover {
-
-    transform: translateY(-2px);
-
-    box-shadow: 0 10px 20px rgba(0,0,0,.10);
-
-}
-
-
-/* ==========================
-   CARD
-========================== */
-
-.card {
-
-    background: white;
-
-    border-radius: 18px;
-
-    padding: 30px;
-
-    box-shadow: 0 8px 25px rgba(0,0,0,.06);
-
-    margin-bottom: 30px;
-
-}
-
-
-/* ==========================
-   LABEL
-========================== */
-
-label {
-
-    display: block;
-
-    font-weight: 600;
-
-    margin-top: 22px;
-
-    margin-bottom: 8px;
-
-}
-
-
-/* ==========================
-   TEXTAREA
-========================== */
-
-textarea {
-
-    width: 100%;
-
-    resize: vertical;
-
-    border: 1px solid #d1d5db;
-
-    border-radius: 12px;
-
-    padding: 14px;
-
-    font-size: 15px;
-
-    outline: none;
-
-    transition: .25s;
-
-    background: #fafafa;
-
-}
-
-textarea:focus {
-
-    border-color: #2563eb;
-
-    background: white;
-
-}
-
-
-/* ==========================
-   VERIFY BUTTON
-========================== */
-
-#verifyBtn {
-
-    width: 100%;
-
-    margin-top: 30px;
-
-    padding: 16px;
-
-    border: none;
-
-    border-radius: 12px;
-
-    background: #2563eb;
-
-    color: white;
-
-    font-size: 16px;
-
-    font-weight: 600;
-
-    cursor: pointer;
-
-    transition: .25s;
-
-}
-
-#verifyBtn:hover {
-
-    background: #1d4ed8;
-
-}
-
-
-/* ==========================
-   LOADER
-========================== */
-
-#loader {
-
-    text-align: center;
-
-    margin-bottom: 30px;
-
-}
-
-.spinner {
-
-    width: 45px;
-
-    height: 45px;
-
-    border: 5px solid #e5e7eb;
-
-    border-top: 5px solid #2563eb;
-
-    border-radius: 50%;
-
-    animation: spin .9s linear infinite;
-
-    margin: auto;
-
-    margin-bottom: 15px;
-
-}
-
-@keyframes spin {
-
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-
-}
-
-
-/* ==========================
-   RESULT
-========================== */
-
-#resultCard h2 {
-
-    margin-bottom: 25px;
-
-}
-
-#statusBadge {
-
-    display: inline-block;
-
-    padding: 10px 18px;
-
-    border-radius: 999px;
-
-    background: #dcfce7;
-
-    color: #166534;
-
-    font-weight: 600;
-
-    margin-bottom: 25px;
-
-}
-
-
-/* ==========================
-   METRICS
-========================== */
-
-.metric {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    margin: 18px 0;
-
-    font-size: 16px;
-
-}
-
-
-/* ==========================
-   PROGRESS BAR
-========================== */
-
-.progress {
-
-    width: 100%;
-
-    height: 12px;
-
-    background: #e5e7eb;
-
-    border-radius: 999px;
-
-    overflow: hidden;
-
-    margin: 22px 0;
-
-}
-
-#progressBar {
-
-    width: 0%;
-
-    height: 100%;
-
-    background: #ef4444;
-
-    transition: width .6s;
-
-}
-
-
-/* ==========================
-   FOOTER
-========================== */
-
-footer {
-
-    text-align: center;
-
-    color: #6b7280;
-
-    margin-top: 40px;
-
-    font-size: 14px;
-
-}
-
-
-/* ==========================
-   UTILITIES
-========================== */
-
-.hidden {
-
-    display: none;
-
-}
-
-
-/* ==========================
-   MOBILE
-========================== */
-
-@media(max-width:768px){
 
 header h1{
 
-font-size:32px;
+    font-size:2rem;
+
+    font-weight:700;
+
+}
+
+header p{
+
+    margin-top:6px;
+
+    color:#64748b;
+
+    font-size:.95rem;
+
+}
+
+.version{
+
+    background:white;
+
+    border:1px solid #e2e8f0;
+
+    padding:8px 14px;
+
+    border-radius:8px;
+
+    font-size:.9rem;
+
+    color:#475569;
+
+}
+
+.intro{
+
+    margin-bottom:35px;
+
+}
+
+.intro h2{
+
+    font-size:1.45rem;
+
+    margin-bottom:8px;
+
+}
+
+.intro p{
+
+    color:#64748b;
+
+    max-width:760px;
+
+}
+
+.examples{
+
+    background:white;
+
+    border:1px solid #e2e8f0;
+
+    border-radius:12px;
+
+    padding:22px;
+
+    margin-bottom:25px;
+
+    box-shadow:0 1px 3px rgba(0,0,0,.06);
+
+}
+
+.examples h3{
+
+    margin-bottom:16px;
+
+}
+
+.example-buttons{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+}
+
+.example-buttons button{
+
+    border:none;
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:11px 18px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.2s;
+
+}
+
+.example-buttons button:hover{
+
+    background:#1d4ed8;
+
+}
+
+.secondary{
+
+    background:#e2e8f0 !important;
+
+    color:#1e293b !important;
+
+}
+
+.secondary:hover{
+
+    background:#cbd5e1 !important;
 
 }
 
 .card{
 
-padding:20px;
+    background:white;
+
+    border:1px solid #e2e8f0;
+
+    border-radius:12px;
+
+    padding:22px;
+
+    margin-bottom:22px;
+
+    box-shadow:0 1px 3px rgba(0,0,0,.06);
 
 }
 
-.samples{
+.card label{
 
-flex-direction:column;
+    display:block;
+
+    margin-bottom:12px;
+
+    font-weight:600;
+
+}
+
+textarea{
+
+    width:100%;
+
+    resize:vertical;
+
+    min-height:140px;
+
+    padding:15px;
+
+    border:1px solid #cbd5e1;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    font-family:inherit;
+
+    outline:none;
+
+    transition:.2s;
 
 }
 
-.samples button{
+textarea:focus{
 
-width:100%;
+    border-color:#2563eb;
+
+    box-shadow:0 0 0 3px rgba(37,99,235,.12);
 
 }
+
+.verify-btn{
+
+    width:100%;
+
+    height:52px;
+
+    border:none;
+
+    background:#2563eb;
+
+    color:white;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+    margin-top:8px;
+
+}
+
+.verify-btn:hover{
+
+    background:#1d4ed8;
+
+}
+
+.result-card{
+
+    background:white;
+
+    border:1px solid #e2e8f0;
+
+    border-radius:12px;
+
+    padding:26px;
+
+    margin-top:30px;
+
+    box-shadow:0 1px 3px rgba(0,0,0,.06);
+
+}
+
+.hidden{
+
+    display:none;
+
+}
+
+.result-card h3{
+
+    margin-bottom:25px;
+
+}
+
+.result-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+}
+
+.title{
+
+    color:#64748b;
+
+    font-size:.9rem;
+
+}
+
+.result-grid p{
+
+    margin-top:6px;
+
+    font-size:1.15rem;
+
+    font-weight:700;
+
+}
+
+.progress{
+
+    width:100%;
+
+    height:12px;
+
+    background:#e2e8f0;
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+    margin-top:28px;
+
+}
+
+#progressFill{
+
+    width:0;
+
+    height:100%;
+
+    background:#2563eb;
+
+    transition:.5s;
+
+}
+
+footer{
+
+    margin:45px 0 20px;
+
+    text-align:center;
+
+    color:#64748b;
+
+    font-size:.92rem;
+
+}
+
+footer strong{
+
+    color:#0f172a;
+
+}
+
+@media(max-width:768px){
+
+    header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:18px;
+
+    }
+
+    .result-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .example-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .example-buttons button{
+
+        width:100%;
+
+    }
 
 }

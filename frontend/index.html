@@ -3,158 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TrustGuard AI</title>
+    <title>TrustGuard</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <div class="container">
 
-    <!-- ================= HEADER ================= -->
-
     <header>
 
-        <h1>TrustGuard AI</h1>
+        <div>
 
-        <p class="subtitle">
-            Hallucination Detection Engine for Large Language Models
-        </p>
+            <h1>TrustGuard</h1>
 
-        <p class="description">
-            Verify whether an AI-generated response is supported by the supplied context.
-        </p>
+            <p>
+                Hallucination Detection Engine
+            </p>
+
+        </div>
+
+        <span class="version">
+            v1.0
+        </span>
 
     </header>
 
-    <!-- ================= SAMPLE BUTTONS ================= -->
+    <section class="intro">
 
-    <section class="samples">
+        <h2>
+            Verify LLM Responses
+        </h2>
 
-        <button id="groundedBtn">
-            Load Grounded Example
-        </button>
-
-        <button id="hallucinatedBtn">
-            Load Hallucinated Example
-        </button>
+        <p>
+            Evaluate whether a language model's answer is supported by the supplied retrieval context using an ONNX-optimized transformer.
+        </p>
 
     </section>
 
-    <!-- ================= FORM ================= -->
+    <section class="examples">
+
+        <h3>
+            Quick Examples
+        </h3>
+
+        <div class="example-buttons">
+
+            <button id="grounded1">
+                Grounded #1
+            </button>
+
+            <button id="grounded2">
+                Grounded #2
+            </button>
+
+            <button id="grounded3">
+                Grounded #3
+            </button>
+
+            <button id="hallucinated1">
+                Hallucinated #1
+            </button>
+
+            <button id="hallucinated2">
+                Hallucinated #2
+            </button>
+
+            <button id="hallucinated3">
+                Hallucinated #3
+            </button>
+
+            <button id="clearBtn" class="secondary">
+                Clear
+            </button>
+
+        </div>
+
+    </section>
 
     <section class="card">
 
-        <label for="query">
-            Question
+        <label>
+            User Query
         </label>
 
         <textarea
             id="query"
-            rows="3"
             placeholder="Enter the user's question..."
         ></textarea>
 
+    </section>
 
-        <label for="context">
-            Context
+    <section class="card">
+
+        <label>
+            Retrieved Context
         </label>
 
         <textarea
             id="context"
-            rows="7"
-            placeholder="Paste retrieved context..."
+            placeholder="Paste retrieved documents or context..."
         ></textarea>
 
+    </section>
 
-        <label for="response">
-            LLM Response
+    <section class="card">
+
+        <label>
+            Model Response
         </label>
 
         <textarea
             id="response"
-            rows="5"
-            placeholder="Paste the model response..."
+            placeholder="Paste the LLM's generated answer..."
         ></textarea>
 
-
-        <button id="verifyBtn">
-            Verify Response
-        </button>
-
     </section>
 
-    <!-- ================= LOADING ================= -->
+    <button
+        id="verifyBtn"
+        class="verify-btn">
 
-    <section id="loader" class="hidden">
+        Verify Response
 
-        <div class="spinner"></div>
+    </button>
 
-        <p>Verifying response...</p>
+    <section
+        id="resultCard"
+        class="result-card hidden">
 
-    </section>
+        <h3>
 
+            Verification Result
 
-    <!-- ================= RESULT ================= -->
+        </h3>
 
-    <section id="resultCard" class="card hidden">
+        <div class="result-grid">
 
-        <h2>Verification Result</h2>
+            <div>
 
-        <div id="statusBadge">
+                <span class="title">
+                    Label
+                </span>
 
-            Grounded
+                <p id="label"></p>
 
-        </div>
+            </div>
 
-        <div class="metric">
+            <div>
 
-            <span>Confidence</span>
+                <span class="title">
+                    Confidence
+                </span>
 
-            <strong id="confidence">
-                --
-            </strong>
+                <p id="confidence"></p>
 
-        </div>
+            </div>
 
-        <div class="metric">
+            <div>
 
-            <span>Hallucination Probability</span>
+                <span class="title">
+                    Hallucination Probability
+                </span>
 
-            <strong id="probability">
-                --
-            </strong>
+                <p id="probability"></p>
+
+            </div>
+
+            <div>
+
+                <span class="title">
+                    Threshold
+                </span>
+
+                <p id="threshold"></p>
+
+            </div>
 
         </div>
 
         <div class="progress">
 
-            <div id="progressBar"></div>
-
-        </div>
-
-        <div class="metric">
-
-            <span>Threshold</span>
-
-            <strong id="threshold">
-                0.35
-            </strong>
+            <div id="progressFill"></div>
 
         </div>
 
     </section>
 
-    <!-- ================= FOOTER ================= -->
-
     <footer>
 
-        <p>
+        Powered by
 
-            Powered by FastAPI • ONNX Runtime • DistilBERT
+        <strong>FastAPI</strong>
 
-        </p>
+        •
+
+        <strong>ONNX Runtime</strong>
+
+        •
+
+        <strong>Hugging Face</strong>
+
+        •
+
+        <strong>Docker</strong>
 
     </footer>
 
