@@ -63,7 +63,7 @@ resultCard.classList.add("hidden");
 try{
 
 const res = await fetch(
-"http://127.0.0.1:8000/verify",
+"https://trustguard-cl8r.onrender.com/verify",
 {
 method:"POST",
 
