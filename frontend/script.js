@@ -23,7 +23,7 @@ query:"What is the capital of France?",
 
 context:"France is a country in Western Europe. Its capital city is Paris.",
 
-response:"The capital of France is Paris."
+response:" Paris."
 
 },
 
@@ -33,7 +33,7 @@ query:"Who created Python?",
 
 context:"Python is a programming language created by Guido van Rossum and first released in 1991.",
 
-response:"Python was created by Guido van Rossum."
+response:" Guido van Rossum."
 
 },
 
@@ -53,7 +53,7 @@ query:"What is the capital of France?",
 
 context:"France is a country in Western Europe. Its capital city is Paris.",
 
-response:"The capital of France is Lyon."
+response:" Lyon."
 
 },
 
@@ -63,7 +63,7 @@ query:"Who created Python?",
 
 context:"Python was created by Guido van Rossum and first released in 1991.",
 
-response:"Python was created by James Gosling."
+response:" James Gosling."
 
 },
 
