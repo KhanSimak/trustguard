@@ -53,7 +53,7 @@ query:"What is the capital of France?",
 
 context:"France is a country in Western Europe. Its capital city is Paris.",
 
-response:" Lyon."
+response:"The capital of France is Lyon."
 
 },
 
@@ -63,7 +63,7 @@ query:"Who created Python?",
 
 context:"Python was created by Guido van Rossum and first released in 1991.",
 
-response:" James Gosling."
+response:"Python was created by James Gosling."
 
 },
 
