@@ -4,6 +4,7 @@ from inference import verify_response
 from schemas import VerifyRequest, VerifyResponse
 from fastapi import HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+import time
 
 app = FastAPI(
     title="TrustGuard API",
@@ -34,19 +35,39 @@ def health():
 def verify(request: VerifyRequest):
 
     if not request.query.strip():
-        raise HTTPException(400, "Query cannot be empty.")
+        raise HTTPException(
+            status_code=400,
+            detail="Query cannot be empty."
+        )
 
     if not request.context.strip():
-        raise HTTPException(400, "Context cannot be empty.")
+        raise HTTPException(
+            status_code=400,
+            detail="Context cannot be empty."
+        )
 
     if not request.response.strip():
-        raise HTTPException(400, "Response cannot be empty.")
+        raise HTTPException(
+            status_code=400,
+            detail="Response cannot be empty."
+        )
 
     if len(request.context) > 10000:
-        raise HTTPException(400, "Context too long.")
+        raise HTTPException(
+            status_code=400,
+            detail="Context too long."
+        )
 
-    return verify_response(
+    start = time.perf_counter()
+
+    result = verify_response(
         request.query,
         request.context,
         request.response,
     )
+
+    latency_ms = round((time.perf_counter() - start) * 1000, 2)
+
+    result["latency_ms"] = latency_ms
+
+    return result

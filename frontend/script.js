@@ -3,7 +3,7 @@ const API_URL = "https://trustguard-cl8r.onrender.com/verify";
 const query = document.getElementById("query");
 const context = document.getElementById("context");
 const responseBox = document.getElementById("response");
-
+const latency = document.getElementById("latency");
 const verifyBtn = document.getElementById("verifyBtn");
 
 const resultCard = document.getElementById("resultCard");
@@ -162,6 +162,8 @@ probability.textContent=
 
 threshold.textContent=
 (data.threshold*100).toFixed(0)+"%";
+latency.textContent =
+Number(data.latency_ms).toFixed(1)+" ms";
 
 progressFill.style.width=
 (data.confidence*100)+"%";

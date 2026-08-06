@@ -8,7 +8,13 @@ class VerifyRequest(BaseModel):
 
 
 class VerifyResponse(BaseModel):
-    label: str
-    confidence: float
-    hallucination_probability: float
-    threshold: float
+
+    label:str
+
+    confidence:float
+
+    hallucination_probability:float
+
+    threshold:float
+
+    latency_ms:float
