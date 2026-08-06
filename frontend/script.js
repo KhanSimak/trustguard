@@ -51,7 +51,7 @@ hallucinated1:{
 
 query:"What is the capital of France?",
 
-context:"France is a country in Western Europe. Its capital city is Paris.",
+context:"France capital city is Paris.",
 
 response:"The capital of France is Lyon."
 
